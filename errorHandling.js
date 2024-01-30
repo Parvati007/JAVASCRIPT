@@ -23,3 +23,37 @@ let q = false;
  console.log(p&&q);           //logical AND : false
  console.log(p||q);           //logical OR : true
  console.log(!p);             //logical NOT : false
+
+
+
+ //Timers
+
+ //setTimeout Function          //executes the piece of code after a specified delay(only once)
+ const delayedFunction = () => {                    //declared using arrow function
+    console.log('Delayed function executed!');      //asynchronous type
+ };
+
+ setTimeout(delayedFunction,2000);//executes after 2 secs
+
+ 
+ //setInterval Function   //execute a function repeatedly at a specified interval
+
+//  const repeatedFunction = () => {
+//     console.log('repeated function executed!');
+//  };
+
+//  const intervalId = setInterval(repeatedFunction,1000);      //executes every 1 seconds
+
+
+//in case you want to stop after some time    //by usigng clear interval we can stop setInterval.
+
+function repeatedFunction(){
+    console.log('executing repeated function...');
+}
+
+const intervalId = setInterval(repeatedFunction,1000);
+
+setTimeout(() => {
+    clearInterval(intervalId); //stop the interval
+    console.log('interval stopped.');},5000);
+
